@@ -1,15 +1,12 @@
 {
   "extends": [
     "config:base",
-    ":dependencyDashboard",
-    ":automergeMinor",
     ":prNotPending",
     "group:linters"
   ],
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["at any time"],
-    "stabilityDays": 0,
     "dependencyDashboardApproval": true
   },
   "ignorePaths": ["dockers/texcmp/"],
@@ -34,7 +31,6 @@
       "datasourceTemplate": "npm"
     }
   ],
-  "stabilityDays": 3,
   "rangeStrategy": "update-lockfile",
   "commitMessageSuffix": "[skip netlify]",
   "postUpdateOptions": ["yarnDedupeHighest"],
